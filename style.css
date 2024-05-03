@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 40%;
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 60%;
+    }
+}
+@media screen and (min-width: 900px) {
+    form {
+        width: 25%;
+    }
+}
+
+.form-select {
+    border-color: transparent;
+}
