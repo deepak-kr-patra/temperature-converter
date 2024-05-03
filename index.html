@@ -8,50 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script>
-        const convert = () => {
-            let input_value = document.getElementById("inputTemperature").value;
-            let output_value;
-            // if no input value then no output value
-            if (input_value.length == 0) {
-                return;
-            }
-            if (document.getElementById("inputSelector").value == "Fahrenheit") {
-                if (document.getElementById("outputSelector").value == "Celsius") {
-                    // converting from fahrenheit to celsius
-                    output_value = (input_value - 32) * 5 / 9;
-                } else if (document.getElementById("outputSelector").value == "Kelvin") {
-                    // converting from fahrenheit to kelvin
-                    output_value = (input_value - 32) * 5 / 9 + 273.15;
-                } else {
-                    output_value = input_value;
-                }
-            }
-            else if (document.getElementById("inputSelector").value == "Celsius") {
-                if (document.getElementById("outputSelector").value == "Fahrenheit") {
-                    // converting from celsius to fahrenheit
-                    output_value = (input_value * 9 / 5) + 32;
-                } else if (document.getElementById("outputSelector").value == "Kelvin") {
-                    // converting from celsius to kelvin
-                    output_value = Number(input_value) + 273.15;
-                } else {
-                    output_value = input_value;
-                }
-            }
-            else if (document.getElementById("inputSelector").value == "Kelvin") {
-                if (document.getElementById("outputSelector").value == "Fahrenheit") {
-                    // converting from kelvin to fahrenheit
-                    output_value = (input_value - 273.15) * 9 / 5 + 32;
-                } else if (document.getElementById("outputSelector").value == "Celsius") {
-                    // converting from kelvin to celsius
-                    output_value = Number(input_value) - 273.15;
-                } else {
-                    output_value = input_value;
-                }
-            }
-            document.getElementById("outputTemperature").value = output_value;
-        };
-    </script>
 </head>
 
 <body>
@@ -82,6 +38,8 @@
             <button type="button" class="btn btn-primary my-1" onclick="convert()">Convert</button>
         </form>
     </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
