@@ -1,11 +1,3 @@
-let input_value = document.getElementById("inputTemperature").value;
-let output_value;
-
-const setInputValue = (value) => {
-    console.log(value);
-    input_value = value;
-}
-
 const convert = () => {
     let input_value = document.getElementById("inputTemperature").value;
     let output_value;
