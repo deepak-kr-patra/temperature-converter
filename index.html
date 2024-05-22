@@ -14,28 +14,27 @@
     <section>
         <form class="my-5">
             <div class="form-group">
-                <label for="inputTemperature" id="inputTemperatureLabel">
+                <label for="inputTemperature" id="inputTemperatureLabel" class="my-1">
                     <select class="form-select" id="inputSelector" aria-label="Select input type">
                         <!-- <option selected>Open</option> -->
                         <option value="Fahrenheit">Fahrenheit</option>
                         <option value="Celsius">Celsius</option>
                         <option value="Kelvin">Kelvin</option>
-                      </select>
+                    </select>
                 </label>
-                <input type="number" class="form-control" id="inputTemperature" placeholder="Enter value">
+                <input type="number" class="form-control" id="inputTemperature" placeholder="Enter value" oninput="convert()">
             </div>
-            <div class="form-group my-2">
-                <label for="outputTemperature" id="outputTemperatureLabel">
+            <div class="form-group my-3">
+                <label for="outputTemperature" id="outputTemperatureLabel" class="my-1">
                     <select class="form-select" id="outputSelector" aria-label="Select output type">
                         <!-- <option selected>Open</option> -->
                         <option value="Celsius">Celsius</option>
                         <option value="Fahrenheit">Fahrenheit</option>
                         <option value="Kelvin">Kelvin</option>
-                      </select>
+                    </select>
                 </label>
                 <input type="number" class="form-control" id="outputTemperature" placeholder="Result" readonly>
             </div>
-            <button type="button" class="btn btn-primary my-1" onclick="convert()">Convert</button>
         </form>
     </section>
 

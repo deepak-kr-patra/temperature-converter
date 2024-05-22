@@ -1,10 +1,21 @@
+let input_value = document.getElementById("inputTemperature").value;
+let output_value;
+
+const setInputValue = (value) => {
+    console.log(value);
+    input_value = value;
+}
+
 const convert = () => {
     let input_value = document.getElementById("inputTemperature").value;
     let output_value;
     // if no input value then no output value
-    if (input_value.length == 0) {
+    if (!input_value) {
+        output_value = "";
+        document.getElementById("outputTemperature").value = output_value;
         return;
     }
+    console.log("not exited");
     if (document.getElementById("inputSelector").value == "Fahrenheit") {
         if (document.getElementById("outputSelector").value == "Celsius") {
             // converting from fahrenheit to celsius
